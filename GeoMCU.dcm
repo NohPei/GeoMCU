@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP ESP-12S
+D 802.11 b/g/n Wi-Fi Module
+K 802.11 Wi-Fi
+F https://docs.ai-thinker.com/_media/esp8266/docs/esp-12s_product_specification_en.pdf
+$ENDCMP
+#
+#End Doc Library

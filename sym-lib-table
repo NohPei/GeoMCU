@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name GeoMCU)(type Legacy)(uri ${KIPRJMOD}/GeoMCU.lib)(options "")(descr ""))
+)
