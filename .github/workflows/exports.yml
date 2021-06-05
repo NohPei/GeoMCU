@@ -4,40 +4,41 @@ name: KiCad Exports
 
 # Controls when the action will run. 
 on:
-  # Run when any design files are changed
-  push:
-    paths:
-    - '**.sch'
-    - '**.kicad_pcb'
-  pull_request:
-    paths:
-      - '**.sch'
-      - '**.kicad_pcb'
+        # Run when any design files are changed
+        push:
+                paths:
+                        - '**.sch'
+                        - '**.kicad_pcb'
+                pull_request:
+                        paths:
+                                - '**.sch'
+                                - '**.kicad_pcb'
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+        # Allows you to run this workflow manually from the Actions tab
+        workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  #jobs:
-  exports:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - uses: nerdyscout/kicad-exports@v2.3
-      with:
-      # Required - kibot config file
-        config: docs.kibot.yaml
-      # optional - prefix to output defined in config
-        dir: docs
-      # optional - schematic file
-        schema: 'GeoMCU.sch'
-      # optional - PCB design file
-        board: 'GeoMCU.kicad_pcb'
-      # optional - verbose output info
-        verbose: 2
+        #jobs:
+        exports:
+                runs-on: ubuntu-latest
+                steps:
+                        - uses: actions/checkout@v2
+                        - uses: nerdyscout/kicad-exports@v2.3
+                          with:
+                                  # Required - kibot config file
+                                  config: docs.kibot.yaml
+                                  # optional - prefix to output defined in config
+                                  dir: docs
+                                  # optional - schematic file
+                                  schema: 'GeoMCU.sch'
+                                  # optional - PCB design file
+                                  board: 'GeoMCU.kicad_pcb'
+                                  # optional - verbose output info
+                                  verbose: 1
+
 - name: upload results
-      uses: actions/upload-artifact@v2
-      with:
-        name: docs
-        path: docs
+  uses: actions/upload-artifact@v2
+  with:
+          name: docs
+          path: docs
