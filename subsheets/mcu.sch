@@ -1,0 +1,313 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr USLetter 11000 8500
+encoding utf-8
+Sheet 3 3
+Title "GeoMCU"
+Date "2021-06-03"
+Rev "2.5"
+Comp "University of Michigan"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text HLabel 4300 3250 0    50   Output ~ 0
+TXD
+Text HLabel 4300 3350 0    50   Input ~ 0
+RXD
+$Comp
+L GeoMCU:ESP-12S U301
+U 1 1 60BFAB18
+P 5200 3200
+F 0 "U301" H 5200 4181 50  0000 C CNN
+F 1 "ESP-12S" H 5200 4090 50  0000 C CNN
+F 2 "GeoMCU:ESP-12S" H 5200 3200 50  0001 C CNN
+F 3 "https://docs.ai-thinker.com/_media/esp8266/docs/esp-12s_product_specification_en.pdf" H 4850 3300 50  0001 C CNN
+F 4 "C82898" H 5200 3200 50  0001 C CNN "LCSC PN"
+	1    5200 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0302
+U 1 1 60BFB5F8
+P 5200 1550
+F 0 "#PWR0302" H 5200 1400 50  0001 C CNN
+F 1 "+3.3V" H 5215 1723 50  0000 C CNN
+F 2 "" H 5200 1550 50  0001 C CNN
+F 3 "" H 5200 1550 50  0001 C CNN
+	1    5200 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C301
+U 1 1 60BFB9CE
+P 5500 1950
+F 0 "C301" V 5248 1950 50  0000 C CNN
+F 1 "0.1u" V 5339 1950 50  0000 C CNN
+F 2 "" H 5538 1800 50  0001 C CNN
+F 3 "~" H 5500 1950 50  0001 C CNN
+F 4 "C1525" H 5500 1950 50  0001 C CNN "LCSC PN"
+	1    5500 1950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5350 1950 5200 1950
+Connection ~ 5200 1950
+Wire Wire Line
+	5200 1950 5200 1650
+$Comp
+L power:GNDD #PWR0304
+U 1 1 60BFC7DA
+P 5800 2100
+F 0 "#PWR0304" H 5800 1850 50  0001 C CNN
+F 1 "GNDD" H 5804 1945 50  0000 C CNN
+F 2 "" H 5800 2100 50  0001 C CNN
+F 3 "" H 5800 2100 50  0001 C CNN
+	1    5800 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 1950 5800 1950
+Wire Wire Line
+	5800 1950 5800 2100
+Wire Wire Line
+	5200 3800 5200 4000
+$Comp
+L power:GNDD #PWR0303
+U 1 1 60BFD017
+P 5200 4000
+F 0 "#PWR0303" H 5200 3750 50  0001 C CNN
+F 1 "GNDD" H 5204 3845 50  0000 C CNN
+F 2 "" H 5200 4000 50  0001 C CNN
+F 3 "" H 5200 4000 50  0001 C CNN
+	1    5200 4000
+	1    0    0    -1  
+$EndComp
+NoConn ~ 4600 3000
+Wire Wire Line
+	4300 3350 4600 3350
+Wire Wire Line
+	4600 3250 4300 3250
+$Comp
+L power:GNDD #PWR0301
+U 1 1 60C00B1A
+P 3300 2600
+F 0 "#PWR0301" H 3300 2350 50  0001 C CNN
+F 1 "GNDD" H 3304 2445 50  0000 C CNN
+F 2 "" H 3300 2600 50  0001 C CNN
+F 3 "" H 3300 2600 50  0001 C CNN
+	1    3300 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 2600 3300 2500
+Wire Wire Line
+	3300 2500 3400 2500
+$Comp
+L Device:R_US R302
+U 1 1 60C018AB
+P 4500 2350
+F 0 "R302" H 4568 2396 50  0000 L CNN
+F 1 "10k" H 4568 2305 50  0000 L CNN
+F 2 "" V 4540 2340 50  0001 C CNN
+F 3 "~" H 4500 2350 50  0001 C CNN
+F 4 "C17414" H 4500 2350 50  0001 C CNN "LCSC PN"
+	1    4500 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 2500 4500 2600
+Wire Wire Line
+	4500 2600 4600 2600
+Wire Wire Line
+	5200 1950 5200 2100
+Connection ~ 5200 2100
+Wire Wire Line
+	5200 2100 5200 2400
+$Comp
+L Device:R_US R301
+U 1 1 60C045D2
+P 2900 2350
+F 0 "R301" H 2968 2396 50  0000 L CNN
+F 1 "10k" H 2968 2305 50  0000 L CNN
+F 2 "" V 2940 2340 50  0001 C CNN
+F 3 "~" H 2900 2350 50  0001 C CNN
+F 4 "C17414" H 2900 2350 50  0001 C CNN "LCSC PN"
+	1    2900 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R303
+U 1 1 60C1F355
+P 6000 2250
+F 0 "R303" H 6068 2296 50  0000 L CNN
+F 1 "10k" H 6068 2205 50  0000 L CNN
+F 2 "" V 6040 2240 50  0001 C CNN
+F 3 "~" H 6000 2250 50  0001 C CNN
+F 4 "C17414" H 6000 2250 50  0001 C CNN "LCSC PN"
+	1    6000 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 1950 6000 1950
+Wire Wire Line
+	6000 1950 6000 2100
+Connection ~ 5800 1950
+Wire Wire Line
+	6000 2400 6000 2600
+Wire Wire Line
+	6000 2600 5800 2600
+Wire Wire Line
+	4500 2200 4500 2100
+Connection ~ 4500 2100
+Wire Wire Line
+	4500 2100 5200 2100
+Wire Wire Line
+	4200 2500 4200 2600
+Wire Wire Line
+	4200 2600 4500 2600
+Connection ~ 4500 2600
+Wire Wire Line
+	2900 2100 2900 2200
+Wire Wire Line
+	2900 2100 4500 2100
+Wire Wire Line
+	2900 2950 4250 2950
+Wire Wire Line
+	4250 2950 4250 2800
+Wire Wire Line
+	4250 2800 4600 2800
+Wire Wire Line
+	2900 2500 2900 2950
+$Comp
+L Device:R_US R304
+U 1 1 60C28075
+P 6550 2250
+F 0 "R304" H 6618 2296 50  0000 L CNN
+F 1 "10k" H 6618 2205 50  0000 L CNN
+F 2 "" V 6590 2240 50  0001 C CNN
+F 3 "~" H 6550 2250 50  0001 C CNN
+F 4 "C17414" H 6550 2250 50  0001 C CNN "LCSC PN"
+	1    6550 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW302
+U 1 1 60C2A15A
+P 6900 2650
+F 0 "SW302" H 6900 2935 50  0000 C CNN
+F 1 "BTN_PROG" H 6900 2844 50  0000 C CNN
+F 2 "" H 6900 2850 50  0001 C CNN
+F 3 "~" H 6900 2850 50  0001 C CNN
+F 4 "C398053" H 6900 2650 50  0001 C CNN "LCSC PN"
+	1    6900 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDD #PWR0305
+U 1 1 60C2AEFC
+P 7250 2800
+F 0 "#PWR0305" H 7250 2550 50  0001 C CNN
+F 1 "GNDD" H 7254 2645 50  0000 C CNN
+F 2 "" H 7250 2800 50  0001 C CNN
+F 3 "" H 7250 2800 50  0001 C CNN
+	1    7250 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7250 2800 7250 2650
+Wire Wire Line
+	7250 2650 7100 2650
+Text HLabel 6450 3000 2    50   Output ~ 0
+SCL
+Text HLabel 6450 2900 2    50   BiDi ~ 0
+SDA
+Wire Wire Line
+	5800 3000 6450 3000
+Wire Wire Line
+	5800 2900 6450 2900
+Text HLabel 6450 3500 2    50   Output ~ 0
+SCLK
+Text HLabel 6450 3400 2    50   Input ~ 0
+MISO
+Text HLabel 6450 3300 2    50   Output ~ 0
+MOSI
+Wire Wire Line
+	6450 3300 5800 3300
+Wire Wire Line
+	5800 3400 6450 3400
+Wire Wire Line
+	6450 3500 5800 3500
+Text Label 4400 2300 2    50   ~ 0
+~RST
+Text Label 5800 4050 0    50   ~ 0
+~RST
+Wire Wire Line
+	4200 2500 4200 2300
+Wire Wire Line
+	4200 2300 4400 2300
+Connection ~ 4200 2500
+Text HLabel 6450 2800 2    50   Output ~ 0
+ADC_CS
+Wire Wire Line
+	6550 1650 5200 1650
+Wire Wire Line
+	6550 1650 6550 2100
+Connection ~ 5200 1650
+Wire Wire Line
+	5200 1650 5200 1550
+Wire Wire Line
+	5800 2800 6200 2800
+Wire Wire Line
+	6700 2650 6550 2650
+Wire Wire Line
+	6550 2650 6550 2400
+Wire Wire Line
+	6550 2650 6200 2650
+Wire Wire Line
+	6200 2650 6200 2800
+Connection ~ 6550 2650
+Connection ~ 6200 2800
+Wire Wire Line
+	6200 2800 6450 2800
+NoConn ~ 5800 2700
+Text Notes 7150 2550 0    50   ~ 0
+Press during Reset for\nBootloader/Flashing Mode
+Text Notes 6050 2100 0    50   ~ 0
+P↓ for\nFlash Boot
+$Comp
+L Switch:SW_Push SW301
+U 1 1 60CBCD84
+P 3600 2500
+F 0 "SW301" H 3600 2785 50  0000 C CNN
+F 1 "BTN_RST" H 3600 2694 50  0000 C CNN
+F 2 "" H 3600 2700 50  0001 C CNN
+F 3 "~" H 3600 2700 50  0001 C CNN
+F 4 "C398053" H 3600 2500 50  0001 C CNN "LCSC PN"
+	1    3600 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 2500 4200 2500
+$Comp
+L Jumper:SolderJumper_2_Bridged JP301
+U 1 1 60CC5A62
+P 6000 3800
+F 0 "JP301" V 5954 3868 50  0000 L CNN
+F 1 "SolderJumper_2_Bridged" V 6045 3868 50  0000 L CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm" H 6000 3800 50  0001 C CNN
+F 3 "~" H 6000 3800 50  0001 C CNN
+	1    6000 3800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5800 3600 6000 3600
+Wire Wire Line
+	6000 3600 6000 3650
+Wire Wire Line
+	6000 3950 6000 4050
+Wire Wire Line
+	6000 4050 5800 4050
+$EndSCHEMATC
