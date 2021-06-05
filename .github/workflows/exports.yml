@@ -37,8 +37,10 @@ jobs:
                                   # optional - verbose output info
                                   verbose: 1
 
-- name: upload results
-  uses: actions/upload-artifact@v2
-  with:
-          name: docs
-          path: docs
+          upload: upload results
+                needs: exports
+                steps:
+                        uses: actions/upload-artifact@v2
+                        with:
+                                name: docs
+                                path: docs
