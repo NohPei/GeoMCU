@@ -7,7 +7,6 @@ preflight:
   run_erc: true
   erc_warnings: true
   run_drc: true
-  update_xml: true
   ignore_unconnected: false
 
 global:
@@ -32,33 +31,37 @@ outputs:
     comment: "Print F.Cu+Dwgs.User"
     type: pdf_pcb_print
     dir: .
+    output: "%p-rev%r_%DT%T-F_Cu.%x"
     layers:
-      - layer: F.Cu
-      - layer: Dwgs.User
+      - 'F.Cu'
+      - 'user'
 
   - name: 'print_bottom'
     comment: "Print B.Cu+Dwgs.User"
     type: pdf_pcb_print
+    output: "%p-rev%r_%DT%T-B_Cu.%x"
     dir: .
     layers:
-      - layer: B.Cu
-      - layer: Dwgs.User
+      - 'B.Cu'
+      - 'user'
 
   - name: 'print_in1'
     comment: "Print In1.Cu+Dwgs.User"
     type: pdf_pcb_print
+    output: "%p-rev%r_%DT%T-In1_Cu.%x"
     dir: .
     layers:
-      - layer: In1.Cu
-      - layer: Dwgs.User
+      - 'In1.Cu'
+      - 'user'
 
   - name: 'print_in2'
     comment: "Print In2.Cu+Dwgs.User"
+    output: "%p-rev%r_%DT%T-In2_Cu.%x"
     type: pdf_pcb_print
     dir: .
     layers:
-      - layer: In2.Cu
-      - layer: Dwgs.User
+      - 'In2.Cu'
+      - 'user'
 
 
   - name: 'bom_csv'
@@ -68,15 +71,18 @@ outputs:
     options:
       columns:
         - Row
-        - References
-        - Part
+        - Reference
         - Value
-        - field: LCSC#
+        - field: 'LCSC PN'
           name: LCSC Part No.
         - Footprint
-        - Desc
-        - 'Quantity Per PCB'
+        - field: 'Qty'
+          name: 'Quantity per PCB'
       format: CSV
+      group_connectors: true
+      group_fields:
+        - 'Value'
+        - 'Footprint'
 
   - name: 'position'
     comment: "Generic pick and place file"
@@ -111,39 +117,7 @@ outputs:
       use_gerber_x2_attributes: true
       use_gerber_net_attributes: true
 
-      layers:
-        - layer: F.Cu
-          suffix: F_Cu
-        - layer: B.Cu
-          suffix: B_Cu
-        - layer: GND
-          suffix: GND_Cu
-        - layer: Power_+3,3V
-          suffix: Power_Cu
-        - layer: Señal_1
-          suffix: S1_Cu
-        - layer: Señal_2
-          suffix: S2_Cu
-        - layer: F.Paste
-          suffix: F_Paste
-        - layer: B.Paste
-          suffix: B_Paste
-        - layer: F.SilkS
-          suffix: F_SilkS
-        - layer: B.SilkS
-          suffix: B_SilkS
-        - layer: F.Mask
-          suffix: F_Mask
-        - layer: B.Mask
-          suffix: B_Mask
-        - layer: Dwgs.User
-          suffix: Dwgs_User
-        - layer: Edge.Cuts
-          suffix: Edge_Cuts
-        - layer: F.Fab
-          suffix: F_Fab
-        - layer: B.Fab
-          suffix: B_Fab
+    layers: 'all'
 
   - name: excellon_drill
     comment: "Excellon drill files"
