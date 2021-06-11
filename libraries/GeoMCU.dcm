@@ -1,5 +1,11 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP AD5270BRM
+D Digital potentiometer, 1024 position, 1% Resistor Tolerance, SPI interface, MSOP-10
+K digital potentiometer
+F https://www.analog.com/media/en/technical-documentation/data-sheets/AD5270_5271.pdf
+$ENDCMP
+#
 $CMP ESP-12S
 D 802.11 b/g/n Wi-Fi Module
 K 802.11 Wi-Fi
