@@ -410,18 +410,6 @@ F 3 "~" H 4500 3050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Analog_ADC:MCP3201 U204
-U 1 1 60C990F9
-P 4600 5650
-F 0 "U204" H 4600 5261 50  0000 C CNN
-F 1 "MCP3201" H 4600 5170 50  0000 C CNN
-F 2 "" H 5350 5300 50  0001 C CNN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/21290D.pdf" H 5400 5550 50  0001 C CNN
-F 4 "C49274" H 4600 5650 50  0001 C CNN "LCSC PN"
-	1    4600 5650
-	-1   0    0    -1  
-$EndComp
-$Comp
 L power:+3.3VA #PWR0214
 U 1 1 60C99B8A
 P 4700 5000
@@ -626,17 +614,6 @@ Wire Wire Line
 Connection ~ 5150 3350
 Wire Wire Line
 	5150 3350 5150 2850
-$Comp
-L GeoMCU:AD5270BRM U203
-U 1 1 60C58BAD
-P 2750 2700
-F 0 "U203" H 2750 3381 50  0000 C CNN
-F 1 "AD5270BRM" H 2750 3290 50  0000 C CNN
-F 2 "Package_SO:MSOP-10_3x3mm_P0.5mm" H 3500 2250 50  0001 C CNN
-F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/AD5270_5271.pdf" H 2750 2700 50  0001 C CNN
-	1    2750 2700
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2650 3200 2650 3850
 Wire Wire Line
@@ -674,4 +651,26 @@ Text HLabel 1100 2650 0    50   Input ~ 0
 RES_CS
 Wire Wire Line
 	1100 2650 2250 2650
+$Comp
+L GeoMCU:MCP3201 U204
+U 1 1 60C6D049
+P 4600 5650
+F 0 "U204" H 4600 5261 50  0000 C CNN
+F 1 "MCP3201" H 4600 5170 50  0000 C CNN
+F 2 "" H 5350 5300 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/21290D.pdf" H 5400 5550 50  0001 C CNN
+	1    4600 5650
+	-1   0    0    -1  
+$EndComp
+$Comp
+L GeoMCU:AD5270BRM U203
+U 1 1 60C6F4E0
+P 2750 2700
+F 0 "U203" H 2750 3381 50  0000 C CNN
+F 1 "AD5270BRM" H 2750 3290 50  0000 C CNN
+F 2 "Package_SO:MSOP-10_3x3mm_P0.5mm" H 3500 2250 50  0001 C CNN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/AD5270_5271.pdf" H 2750 2700 50  0001 C CNN
+	1    2750 2700
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
