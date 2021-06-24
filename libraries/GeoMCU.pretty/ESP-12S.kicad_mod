@@ -1,4 +1,4 @@
-(module ESP-12S (layer F.Cu) (tedit 60B995E1)
+(module ESP-12S (layer F.Cu) (tedit 60CA6BF9)
   (descr "Wi-Fi Module, https://docs.ai-thinker.com/_media/esp8266/docs/esp-12s_product_specification_en.pdf")
   (tags "Wi-Fi Module")
   (attr smd)
@@ -63,7 +63,8 @@
   (pad 3 smd rect (at -7.6 0.5) (size 2.5 1) (layers F.Cu F.Paste F.Mask))
   (pad 2 smd rect (at -7.6 -1.5) (size 2.5 1) (layers F.Cu F.Paste F.Mask))
   (pad 1 smd rect (at -7.6 -3.5) (size 2.5 1) (layers F.Cu F.Paste F.Mask))
-  (pad GND smd rect (at 0.5 2) (size 3.6 3.6) (layers F.Cu F.Paste F.Mask))
+  (pad G smd rect (at 0.5 2) (size 3.6 3.6) (layers F.Cu F.Paste F.Mask)
+    (zone_connect 2))
   (model ${KISYS3DMOD}/RF_Module.3dshapes/ESP-12E.wrl
     (at (xyz 0 0 0))
     (scale (xyz 1 1 1))
