@@ -26,7 +26,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: nerdyscout/kicad-exports@v2.3
+      - name: KiBot Docs Export
+        uses: nerdyscout/kicad-exports@v2.3
         with:
           # Required - kibot config file
           config: docs.kibot.yaml
@@ -42,14 +43,15 @@ jobs:
       
       - name: Google Chat Notification
         uses: Co-qn/google-chat-notification@releases/v1
+        if: always()
         with:
           name: Exports
-          url: ${{ secrets.GOOGLE_CHAT_WEBHOOK }}
+          url: ${{ secrets.PIGHARDWARE_GCHAT_WEBHOOK_URL }}
           status: ${{ job.status }}
-          if: always()
 
-      - uses: actions/upload-artifact@v2
+      - name: Artifacts Upload
+        uses: actions/upload-artifact@v2
+        if: always()
         with:
           name: docs
           path: docs
-          if: always()
