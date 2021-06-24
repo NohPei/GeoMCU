@@ -1,11 +1,14 @@
 # GeoMCU Board
 Interface board for Structure-as-Sensor Geophones with embedded Microcontroller.
+
+<img src="https://user-images.githubusercontent.com/17226041/123313666-ba261280-d4f7-11eb-8fb6-aeb91dd695b2.png" width="250em" alt="Lab-Logo-Colors" />
+
 # Firmware
 * Firmware Files (buildable with [PlatformIO](https://platformio.org/install/cli) or [Arduino](https://www.arduino.cc/en/software)) at [NohPei/geoscope-sensor](https://github.com/NohPei/geoscope-sensor/tree/cli)
 # TODO's
 * [x] Parts Selections
 * [x] Schematic
-* [ ] PCB layout
+* [x] PCB layout
 * [ ] Reviews
 	* [ ] Pei
 	* [ ] Fab Engineers
@@ -27,3 +30,5 @@ Interface board for Structure-as-Sensor Geophones with embedded Microcontroller.
 * 1 TLV1117 (or equivalent) Linear Regulator
 * 1 AD5270BRMZ Digital POT for programmable gain
 * 2 Molex SL-compatible 2-pin header connectors (1 for Geophone connection, 1 for power connection)
+* Optional: 1 Vertical-Launch BNC connector for wired data collection
+
