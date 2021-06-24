@@ -31,7 +31,6 @@ outputs:
     comment: "Print F.Cu+Dwgs.User"
     type: pdf_pcb_print
     dir: .
-    output: "%p-rev%r_%DT%T-F_Cu.%x"
     layers:
       - 'F.Cu'
       - 'user'
@@ -39,7 +38,6 @@ outputs:
   - name: 'print_bottom'
     comment: "Print B.Cu+Dwgs.User"
     type: pdf_pcb_print
-    output: "%p-rev%r_%DT%T-B_Cu.%x"
     dir: .
     layers:
       - 'B.Cu'
@@ -48,7 +46,6 @@ outputs:
   - name: 'print_in1'
     comment: "Print In1.Cu+Dwgs.User"
     type: pdf_pcb_print
-    output: "%p-rev%r_%DT%T-In1_Cu.%x"
     dir: .
     layers:
       - 'In1.Cu'
@@ -56,7 +53,6 @@ outputs:
 
   - name: 'print_in2'
     comment: "Print In2.Cu+Dwgs.User"
-    output: "%p-rev%r_%DT%T-In2_Cu.%x"
     type: pdf_pcb_print
     dir: .
     layers:
