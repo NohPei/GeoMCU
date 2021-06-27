@@ -69,7 +69,7 @@ outputs:
         - Row
         - Reference
         - Value
-        - field: 'LCSC PN'
+        - field: 'LCSC'
           name: LCSC Part No.
         - Footprint
         - field: 'Qty'
