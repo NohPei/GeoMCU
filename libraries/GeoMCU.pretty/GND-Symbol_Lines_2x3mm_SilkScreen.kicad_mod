@@ -1,0 +1,16 @@
+(module GND-Symbol_Lines_2x3mm_SilkScreen (layer F.Cu) (tedit 60DE7004)
+  (descr "Open Source Hardware Symbol")
+  (tags "Logo Symbol OSHW")
+  (attr virtual)
+  (fp_text reference REF** (at 0 0) (layer F.SilkS) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text value GND-Symbol_Lines_2x3mm_SilkScreen (at 0.75 0) (layer F.Fab) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_line (start -0.1 1) (end 0.1 1) (layer F.SilkS) (width 0.25))
+  (fp_line (start -0.3 0.5) (end 0.3 0.5) (layer F.SilkS) (width 0.25))
+  (fp_line (start -0.6 0) (end 0.6 0) (layer F.SilkS) (width 0.25))
+  (fp_line (start -1 -0.5) (end 1 -0.5) (layer F.SilkS) (width 0.25))
+  (fp_line (start 0 -0.5) (end 0 -2) (layer F.SilkS) (width 0.25))
+)
