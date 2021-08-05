@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="5.0000005mm"
+   height="1.8976377mm"
+   viewBox="0 0 5.0000005 1.8976377"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c4e8f9ed74, 2021-05-24)"
+   sodipodi:docname="Geophone Polarity.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="4.340954"
+     inkscape:cx="35.821619"
+     inkscape:cy="46.994278"
+     inkscape:window-width="1920"
+     inkscape:window-height="1016"
+     inkscape:window-x="0"
+     inkscape:window-y="34"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="SilkS"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-58.024433,-138.77607)">
+    <path
+       id="path31"
+       style="fill:none;stroke:#000000;stroke-width:0.141841;stroke-linecap:round;stroke-linejoin:round"
+       d="m 62.953513,140.11697 a 2.4290798,0.48581597 0 0 1 -2.42908,0.48582 2.4290798,0.48581597 0 0 1 -2.42908,-0.48582 2.4290798,0.48581597 0 0 1 2.42908,-0.48581 2.4290798,0.48581597 0 0 1 2.42908,0.48581 z" />
+    <path
+       id="path31-3"
+       style="fill:none;stroke:#000000;stroke-width:0.141841;stroke-linecap:round;stroke-linejoin:round"
+       d="m 61.912479,140.11697 a 1.3880457,0.27760911 0 0 1 -1.388046,0.27761 1.3880457,0.27760911 0 0 1 -1.388046,-0.27761 1.3880457,0.27760911 0 0 1 1.388046,-0.27761 1.3880457,0.27760911 0 0 1 1.388046,0.27761 z" />
+    <g
+       id="g1505"
+       transform="matrix(0.23640089,0,0,0.23640089,46.164426,106.72849)">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 58.418642,141.36897 v -5.80441"
+         id="path1073" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 63.069959,141.36897 v -5.80441"
+         id="path1073-6" />
+    </g>
+    <path
+       id="path1715"
+       style="stroke-width:0.236401;stroke-linecap:round;stroke-linejoin:round"
+       d="m 62.451991,140.11697 a 0.12692966,0.12692966 0 0 1 -0.126929,0.12693 0.12692966,0.12692966 0 0 1 -0.12693,-0.12693 0.12692966,0.12692966 0 0 1 0.12693,-0.12693 0.12692966,0.12692966 0 0 1 0.126929,0.12693 z" />
+  </g>
+</svg>
