@@ -38,7 +38,7 @@ F 6 "X7R, >5V, 0603" H 6800 2750 50  0001 C CNN "MFG Part#"
 	1    6800 2750
 	-1   0    0    -1  
 $EndComp
-Text HLabel 9800 2550 2    50   Output ~ 0
+Text HLabel 10100 2550 2    50   Output ~ 0
 WiredOut
 $Comp
 L Device:C C13
@@ -780,4 +780,18 @@ Wire Wire Line
 Wire Wire Line
 	3700 1300 3700 1350
 Connection ~ 3700 1350
+$Comp
+L Device:R_US R17
+U 1 1 61AF389C
+P 9950 2550
+F 0 "R17" V 9745 2550 50  0000 C CNN
+F 1 "0" V 9836 2550 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 9990 2540 50  0001 C CNN
+F 3 "" H 9950 2550 50  0001 C CNN
+F 4 "Any" H 9950 2550 50  0001 C CNN "MANUFACTURER"
+F 5 "<=0.01 Ohms, 0805" H 9950 2550 50  0001 C CNN "MFG Part#"
+F 6 "C17477" H 9950 2550 50  0001 C CNN "LCSC"
+	1    9950 2550
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
