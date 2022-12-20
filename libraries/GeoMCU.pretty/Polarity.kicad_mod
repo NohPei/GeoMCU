@@ -1,7 +1,7 @@
 (footprint "Polarity" (version 20211014) (generator pcbnew)
   (layer "F.Cu")
   (tedit 0)
-  (attr through_hole)
+  (attr board_only exclude_from_pos_files exclude_from_bom)
   (fp_text reference "G***" (at 0 0) (layer "F.SilkS") hide
     (effects (font (size 1.524 1.524) (thickness 0.3)))
     (tstamp e1b59f1e-9f79-406e-b786-6e413665d4c2)
