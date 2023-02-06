@@ -439,7 +439,9 @@
           "/Analog Chain/RES_CS",
           "/Analog Chain/SCLK",
           "/Microcontroller/RX",
+          "/Microcontroller/RX_LOG",
           "/Microcontroller/TX",
+          "/Microcontroller/TX_LOG",
           "/Microcontroller/~{FLASH}",
           "/Microcontroller/~{RST}",
           "Net-(R18-Pad1)"
