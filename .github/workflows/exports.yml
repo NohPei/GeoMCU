@@ -7,14 +7,14 @@ on:
   # Run when any design files are changed
   push:
     paths:
-      - '**.sch'
+      - '**.kicad_sch'
       - '**.kicad_pcb'
-      - '**.pro'
+      - '**.kicad_pro'
   pull_request:
     paths:
-      - '**.sch'
+      - '**.kicad_sch'
       - '**.kicad_pcb'
-      - '**.pro'
+      - '**.kicad_pro'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -25,32 +25,28 @@ jobs:
   exports:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: KiBot Docs Export
-        uses: nerdyscout/kicad-exports@v2.3
+        uses: INTI-CMNB/KiBot@v2_k7
         with:
           # Required - kibot config file
           config: docs.kibot.yaml
           # optional - prefix to output defined in config
           dir: docs
-          # optional - schematic file
-          schema: 'GeoMCU.sch'
-          # optional - PCB design file
-          board: 'GeoMCU.kicad_pcb'
           # optional - verbose output info
-          verbose: 2
+          verbose: 1
       
       
       - name: Google Chat Notification
-        uses: Co-qn/google-chat-notification@releases/v1
+        uses: SimonScholz/google-chat-action@main
         if: always()
         with:
-          name: Exports
-          url: ${{ secrets.PIGHARDWARE_GCHAT_WEBHOOK_URL }}
-          status: ${{ job.status }}
+          title: Fab Exports
+          webhookUrl: ${{ secrets.PIGHARDWARE_GCHAT_WEBHOOK_URL }}
+          jobStatus: ${{ job.status }}
 
       - name: Artifacts Upload
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         if: always()
         with:
           name: docs

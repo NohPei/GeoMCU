@@ -1,3 +1,4 @@
 (sym_lib_table
-  (lib (name GeoMCU)(type Legacy)(uri ${KIPRJMOD}/libraries/GeoMCU.lib)(options "")(descr ""))
+  (version 7)
+  (lib (name "GeoMCU")(type "KiCad")(uri "${KIPRJMOD}/libraries/GeoMCU.kicad_sym")(options "")(descr ""))
 )
