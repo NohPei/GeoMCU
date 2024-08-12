@@ -1320,12 +1320,6 @@
 		(uuid "b456cffc-d9d7-4c91-91f2-36ec9a65dd1b")
 	)
 	(junction
-		(at 106.68 54.61)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c811ed5f-f509-4605-b7d3-da6f79935a1e")
-	)
-	(junction
 		(at 132.08 99.06)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1424,16 +1418,6 @@
 			(type default)
 		)
 		(uuid "25c663ff-96b6-4263-a06e-d1829409cf73")
-	)
-	(wire
-		(pts
-			(xy 93.98 54.61) (xy 96.52 54.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2681e64d-bedc-4e1f-87d2-754aaa485bbd")
 	)
 	(wire
 		(pts
@@ -1554,16 +1538,6 @@
 			(type default)
 		)
 		(uuid "5a33f5a4-a470-4c04-9e2d-532b5f01a5d6")
-	)
-	(wire
-		(pts
-			(xy 104.14 54.61) (xy 106.68 54.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5a390647-51ba-4684-b747-9001f749ff71")
 	)
 	(wire
 		(pts
@@ -2166,18 +2140,6 @@
 			(justify left)
 		)
 		(uuid "bf6104a1-a529-4c00-b4ae-92001543f7ec")
-	)
-	(hierarchical_label "RTS"
-		(shape input)
-		(at 93.98 54.61 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "facb0614-068b-4c9c-a466-d374df96a94c")
 	)
 	(symbol
 		(lib_id "power:+3.3V")
@@ -3494,100 +3456,6 @@
 			(project "GeoMCU"
 				(path "/224768bc-6009-43ba-aa4a-70cbaa15b5a3/00000000-0000-0000-0000-000060b99a92"
 					(reference "R13")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 100.33 54.61 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-000060fb920a")
-		(property "Reference" "R7"
-			(at 100.33 49.403 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "470"
-			(at 100.33 51.7144 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 100.584 53.594 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 100.33 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 100.33 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C23179"
-			(at 100.33 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "MANUFACTURER" "Any"
-			(at 100.33 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "MFG Part#" "<=1%, 0603"
-			(at 100.33 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "24a9118d-cb2b-4cb0-af96-8935ddca583c")
-		)
-		(pin "2"
-			(uuid "d0f8ee69-29c2-4acd-b931-d3fa189d3bb8")
-		)
-		(instances
-			(project "GeoMCU"
-				(path "/224768bc-6009-43ba-aa4a-70cbaa15b5a3/00000000-0000-0000-0000-000060b99a92"
-					(reference "R7")
 					(unit 1)
 				)
 			)
