@@ -1504,9 +1504,9 @@
 		)
 		(symbol "power:+3.3V"
 			(power)
+			(pin_numbers hide)
 			(pin_names
-				(offset 0)
-			)
+				(offset 0) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1604,8 +1604,8 @@
 			(symbol "+3.3V_1_1"
 				(pin power_in line
 					(at 0 0 90)
-					(length 0) hide
-					(name "+3.3V"
+					(length 0)
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1624,9 +1624,9 @@
 		)
 		(symbol "power:+3.3VA"
 			(power)
+			(pin_numbers hide)
 			(pin_names
-				(offset 0)
-			)
+				(offset 0) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1724,8 +1724,8 @@
 			(symbol "+3.3VA_1_1"
 				(pin power_in line
 					(at 0 0 90)
-					(length 0) hide
-					(name "+3.3VA"
+					(length 0)
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1744,9 +1744,9 @@
 		)
 		(symbol "power:GNDA"
 			(power)
+			(pin_numbers hide)
 			(pin_names
-				(offset 0)
-			)
+				(offset 0) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1820,8 +1820,8 @@
 			(symbol "GNDA_1_1"
 				(pin power_in line
 					(at 0 0 270)
-					(length 0) hide
-					(name "GNDA"
+					(length 0)
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1840,9 +1840,9 @@
 		)
 		(symbol "power:GNDD"
 			(power)
+			(pin_numbers hide)
 			(pin_names
-				(offset 0)
-			)
+				(offset 0) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1927,8 +1927,8 @@
 			(symbol "GNDD_1_1"
 				(pin power_in line
 					(at 0 0 270)
-					(length 0) hide
-					(name "GNDD"
+					(length 0)
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1947,9 +1947,9 @@
 		)
 		(symbol "power:GNDREF"
 			(power)
+			(pin_numbers hide)
 			(pin_names
-				(offset 0)
-			)
+				(offset 0) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -2059,8 +2059,8 @@
 			(symbol "GNDREF_1_1"
 				(pin power_in line
 					(at 0 0 270)
-					(length 0) hide
-					(name "GNDREF"
+					(length 0)
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3380,7 +3380,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000060bc9cc9")
-		(property "Reference" "#PWR033"
+		(property "Reference" "#PWR044"
 			(at 209.55 119.38 0)
 			(effects
 				(font
@@ -3415,7 +3415,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
 			(at 209.55 115.57 0)
 			(effects
 				(font
@@ -3430,7 +3430,7 @@
 		(instances
 			(project "GeoMCU"
 				(path "/224768bc-6009-43ba-aa4a-70cbaa15b5a3/00000000-0000-0000-0000-000060b99a4b"
-					(reference "#PWR033")
+					(reference "#PWR044")
 					(unit 1)
 				)
 			)
@@ -3445,7 +3445,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000060bd1582")
-		(property "Reference" "#PWR026"
+		(property "Reference" "#PWR032"
 			(at 58.42 72.39 0)
 			(effects
 				(font
@@ -3480,7 +3480,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
 			(at 58.42 68.58 0)
 			(effects
 				(font
@@ -3495,7 +3495,7 @@
 		(instances
 			(project "GeoMCU"
 				(path "/224768bc-6009-43ba-aa4a-70cbaa15b5a3/00000000-0000-0000-0000-000060b99a4b"
-					(reference "#PWR026")
+					(reference "#PWR032")
 					(unit 1)
 				)
 			)
@@ -3510,7 +3510,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000060bd4064")
-		(property "Reference" "#PWR031"
+		(property "Reference" "#PWR033"
 			(at 58.42 106.68 0)
 			(effects
 				(font
@@ -3545,7 +3545,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GNDD\" , digital ground"
 			(at 58.42 100.33 0)
 			(effects
 				(font
@@ -3560,7 +3560,7 @@
 		(instances
 			(project "GeoMCU"
 				(path "/224768bc-6009-43ba-aa4a-70cbaa15b5a3/00000000-0000-0000-0000-000060b99a4b"
-					(reference "#PWR031")
+					(reference "#PWR033")
 					(unit 1)
 				)
 			)
@@ -3575,7 +3575,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000060be1834")
-		(property "Reference" "C12"
+		(property "Reference" "C14"
 			(at 69.85 64.7192 90)
 			(effects
 				(font
@@ -3609,7 +3609,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor"
 			(at 69.85 71.12 0)
 			(effects
 				(font
@@ -3654,7 +3654,7 @@
 		(instances
 			(project "GeoMCU"
 				(path "/224768bc-6009-43ba-aa4a-70cbaa15b5a3/00000000-0000-0000-0000-000060b99a4b"
-					(reference "C12")
+					(reference "C14")
 					(unit 1)
 				)
 			)
@@ -3669,7 +3669,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000060be5fb5")
-		(property "Reference" "#PWR032"
+		(property "Reference" "#PWR034"
 			(at 74.93 80.01 0)
 			(effects
 				(font
@@ -3704,7 +3704,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GNDA\" , analog ground"
 			(at 74.93 73.66 0)
 			(effects
 				(font
@@ -3719,7 +3719,7 @@
 		(instances
 			(project "GeoMCU"
 				(path "/224768bc-6009-43ba-aa4a-70cbaa15b5a3/00000000-0000-0000-0000-000060b99a4b"
-					(reference "#PWR032")
+					(reference "#PWR034")
 					(unit 1)
 				)
 			)
@@ -3735,7 +3735,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000060c5f461")
-		(property "Reference" "C15"
+		(property "Reference" "C18"
 			(at 169.799 68.6816 0)
 			(effects
 				(font
@@ -3771,7 +3771,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor"
 			(at 172.72 69.85 0)
 			(effects
 				(font
@@ -3780,7 +3780,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C1596"
 			(at 172.72 69.85 0)
 			(effects
 				(font
@@ -3816,7 +3816,7 @@
 		(instances
 			(project "GeoMCU"
 				(path "/224768bc-6009-43ba-aa4a-70cbaa15b5a3/00000000-0000-0000-0000-000060b99a4b"
-					(reference "C15")
+					(reference "C18")
 					(unit 1)
 				)
 			)
@@ -3831,7 +3831,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000060c631ce")
-		(property "Reference" "C13"
+		(property "Reference" "C19"
 			(at 173.99 45.6692 90)
 			(effects
 				(font
@@ -3865,7 +3865,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor"
 			(at 173.99 52.07 0)
 			(effects
 				(font
@@ -3874,7 +3874,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C57112"
 			(at 173.99 52.07 0)
 			(effects
 				(font
@@ -3910,7 +3910,7 @@
 		(instances
 			(project "GeoMCU"
 				(path "/224768bc-6009-43ba-aa4a-70cbaa15b5a3/00000000-0000-0000-0000-000060b99a4b"
-					(reference "C13")
+					(reference "C19")
 					(unit 1)
 				)
 			)
@@ -3925,7 +3925,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000060c63e19")
-		(property "Reference" "R2"
+		(property "Reference" "R12"
 			(at 167.64 59.563 90)
 			(effects
 				(font
@@ -3959,7 +3959,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, US symbol"
 			(at 167.64 64.77 0)
 			(effects
 				(font
@@ -3968,7 +3968,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C4216"
 			(at 167.64 64.77 0)
 			(effects
 				(font
@@ -4004,7 +4004,7 @@
 		(instances
 			(project "GeoMCU"
 				(path "/224768bc-6009-43ba-aa4a-70cbaa15b5a3/00000000-0000-0000-0000-000060b99a4b"
-					(reference "R2")
+					(reference "R12")
 					(unit 1)
 				)
 			)
@@ -4019,7 +4019,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000060c65971")
-		(property "Reference" "R1"
+		(property "Reference" "R11"
 			(at 157.48 59.563 90)
 			(effects
 				(font
@@ -4053,7 +4053,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, US symbol"
 			(at 157.48 64.77 0)
 			(effects
 				(font
@@ -4062,7 +4062,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C23254"
 			(at 157.48 64.77 0)
 			(effects
 				(font
@@ -4098,7 +4098,7 @@
 		(instances
 			(project "GeoMCU"
 				(path "/224768bc-6009-43ba-aa4a-70cbaa15b5a3/00000000-0000-0000-0000-000060b99a4b"
-					(reference "R1")
+					(reference "R11")
 					(unit 1)
 				)
 			)
@@ -4114,7 +4114,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000060c6d049")
-		(property "Reference" "U6"
+		(property "Reference" "U8"
 			(at 116.84 153.3906 0)
 			(effects
 				(font
@@ -4148,7 +4148,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "2.7V 12-Bit A/D Converter with SPI™ Serial Interface, PDIP-8/SOIC-8/MSOP-8/TSSOP-8"
 			(at 116.84 143.51 0)
 			(effects
 				(font
@@ -4211,7 +4211,7 @@
 		(instances
 			(project "GeoMCU"
 				(path "/224768bc-6009-43ba-aa4a-70cbaa15b5a3/00000000-0000-0000-0000-000060b99a4b"
-					(reference "U6")
+					(reference "U8")
 					(unit 1)
 				)
 			)
@@ -4226,7 +4226,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000060c84c3f")
-		(property "Reference" "#PWR029"
+		(property "Reference" "#PWR043"
 			(at 172.72 81.28 0)
 			(effects
 				(font
@@ -4261,7 +4261,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GNDA\" , analog ground"
 			(at 172.72 74.93 0)
 			(effects
 				(font
@@ -4276,7 +4276,7 @@
 		(instances
 			(project "GeoMCU"
 				(path "/224768bc-6009-43ba-aa4a-70cbaa15b5a3/00000000-0000-0000-0000-000060b99a4b"
-					(reference "#PWR029")
+					(reference "#PWR043")
 					(unit 1)
 				)
 			)
@@ -4289,9 +4289,9 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "00000000-0000-0000-0000-000060c8fa89")
-		(property "Reference" "TP10"
+		(property "Reference" "TP11"
 			(at 124.6632 42.7228 0)
 			(effects
 				(font
@@ -4327,7 +4327,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "test point"
 			(at 123.19 45.72 0)
 			(effects
 				(font
@@ -4336,7 +4336,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "DNF"
+		(property "LCSC" "N/A"
 			(at 123.19 45.72 0)
 			(effects
 				(font
@@ -4354,7 +4354,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFG Part#" "DNF"
+		(property "MFG Part#" "N/A"
 			(at 123.19 45.72 0)
 			(effects
 				(font
@@ -4369,7 +4369,7 @@
 		(instances
 			(project "GeoMCU"
 				(path "/224768bc-6009-43ba-aa4a-70cbaa15b5a3/00000000-0000-0000-0000-000060b99a4b"
-					(reference "TP10")
+					(reference "TP11")
 					(unit 1)
 				)
 			)
@@ -4383,7 +4383,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "00000000-0000-0000-0000-000060c93038")
 		(property "Reference" "TP9"
 			(at 41.7068 40.1828 0)
@@ -4421,7 +4421,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "test point"
 			(at 43.18 43.18 0)
 			(effects
 				(font
@@ -4430,7 +4430,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "DNF"
+		(property "LCSC" "N/A"
 			(at 43.18 43.18 0)
 			(effects
 				(font
@@ -4448,7 +4448,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFG Part#" "DNF"
+		(property "MFG Part#" "N/A"
 			(at 43.18 43.18 0)
 			(effects
 				(font
@@ -4479,7 +4479,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000060c99b8a")
-		(property "Reference" "#PWR035"
+		(property "Reference" "#PWR039"
 			(at 119.38 130.81 0)
 			(effects
 				(font
@@ -4514,7 +4514,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+3.3VA\""
 			(at 119.38 127 0)
 			(effects
 				(font
@@ -4529,7 +4529,7 @@
 		(instances
 			(project "GeoMCU"
 				(path "/224768bc-6009-43ba-aa4a-70cbaa15b5a3/00000000-0000-0000-0000-000060b99a4b"
-					(reference "#PWR035")
+					(reference "#PWR039")
 					(unit 1)
 				)
 			)
@@ -4545,7 +4545,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000060c9be3c")
-		(property "Reference" "#PWR034"
+		(property "Reference" "#PWR038"
 			(at 111.76 130.81 0)
 			(effects
 				(font
@@ -4580,7 +4580,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
 			(at 111.76 127 0)
 			(effects
 				(font
@@ -4595,7 +4595,7 @@
 		(instances
 			(project "GeoMCU"
 				(path "/224768bc-6009-43ba-aa4a-70cbaa15b5a3/00000000-0000-0000-0000-000060b99a4b"
-					(reference "#PWR034")
+					(reference "#PWR038")
 					(unit 1)
 				)
 			)
@@ -4611,7 +4611,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000060ca513b")
-		(property "Reference" "#PWR039"
+		(property "Reference" "#PWR040"
 			(at 119.38 163.83 0)
 			(effects
 				(font
@@ -4646,7 +4646,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GNDD\" , digital ground"
 			(at 119.38 157.48 0)
 			(effects
 				(font
@@ -4661,7 +4661,7 @@
 		(instances
 			(project "GeoMCU"
 				(path "/224768bc-6009-43ba-aa4a-70cbaa15b5a3/00000000-0000-0000-0000-000060b99a4b"
-					(reference "#PWR039")
+					(reference "#PWR040")
 					(unit 1)
 				)
 			)
@@ -4677,7 +4677,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000060ca776e")
-		(property "Reference" "#PWR040"
+		(property "Reference" "#PWR042"
 			(at 133.35 163.83 0)
 			(effects
 				(font
@@ -4712,7 +4712,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GNDA\" , analog ground"
 			(at 133.35 157.48 0)
 			(effects
 				(font
@@ -4727,7 +4727,7 @@
 		(instances
 			(project "GeoMCU"
 				(path "/224768bc-6009-43ba-aa4a-70cbaa15b5a3/00000000-0000-0000-0000-000060b99a4b"
-					(reference "#PWR040")
+					(reference "#PWR042")
 					(unit 1)
 				)
 			)
@@ -4743,7 +4743,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000060caa3e4")
-		(property "Reference" "C19"
+		(property "Reference" "C16"
 			(at 105.41 124.4092 90)
 			(effects
 				(font
@@ -4777,7 +4777,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor"
 			(at 105.41 130.81 0)
 			(effects
 				(font
@@ -4822,7 +4822,7 @@
 		(instances
 			(project "GeoMCU"
 				(path "/224768bc-6009-43ba-aa4a-70cbaa15b5a3/00000000-0000-0000-0000-000060b99a4b"
-					(reference "C19")
+					(reference "C16")
 					(unit 1)
 				)
 			)
@@ -4873,7 +4873,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GNDD\" , digital ground"
 			(at 96.52 133.35 0)
 			(effects
 				(font
@@ -4904,7 +4904,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000060cb8bb0")
-		(property "Reference" "#PWR036"
+		(property "Reference" "#PWR041"
 			(at 133.35 138.43 0)
 			(effects
 				(font
@@ -4939,7 +4939,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GNDA\" , analog ground"
 			(at 133.35 132.08 0)
 			(effects
 				(font
@@ -4954,7 +4954,7 @@
 		(instances
 			(project "GeoMCU"
 				(path "/224768bc-6009-43ba-aa4a-70cbaa15b5a3/00000000-0000-0000-0000-000060b99a4b"
-					(reference "#PWR036")
+					(reference "#PWR041")
 					(unit 1)
 				)
 			)
@@ -4970,7 +4970,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000060cb937b")
-		(property "Reference" "C20"
+		(property "Reference" "C17"
 			(at 125.73 124.4092 90)
 			(effects
 				(font
@@ -5004,7 +5004,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor"
 			(at 125.73 130.81 0)
 			(effects
 				(font
@@ -5049,7 +5049,7 @@
 		(instances
 			(project "GeoMCU"
 				(path "/224768bc-6009-43ba-aa4a-70cbaa15b5a3/00000000-0000-0000-0000-000060b99a4b"
-					(reference "C20")
+					(reference "C17")
 					(unit 1)
 				)
 			)
@@ -5064,7 +5064,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-0000610619cb")
-		(property "Reference" "#PWR038"
+		(property "Reference" "#PWR045"
 			(at 209.55 147.32 0)
 			(effects
 				(font
@@ -5099,7 +5099,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GNDA\" , analog ground"
 			(at 209.55 140.97 0)
 			(effects
 				(font
@@ -5114,7 +5114,7 @@
 		(instances
 			(project "GeoMCU"
 				(path "/224768bc-6009-43ba-aa4a-70cbaa15b5a3/00000000-0000-0000-0000-000060b99a4b"
-					(reference "#PWR038")
+					(reference "#PWR045")
 					(unit 1)
 				)
 			)
@@ -5129,7 +5129,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000061207c5b")
-		(property "Reference" "U4"
+		(property "Reference" "U3"
 			(at 68.58 37.6682 0)
 			(effects
 				(font
@@ -5163,7 +5163,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Quad Low-Voltage Rail-to-Rail Output Operational Amplifier, SOIC-14/SSOP-14"
 			(at 68.58 46.99 0)
 			(effects
 				(font
@@ -5244,7 +5244,7 @@
 		(instances
 			(project "GeoMCU"
 				(path "/224768bc-6009-43ba-aa4a-70cbaa15b5a3/00000000-0000-0000-0000-000060b99a4b"
-					(reference "U4")
+					(reference "U3")
 					(unit 2)
 				)
 			)
@@ -5259,7 +5259,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00006120a35e")
-		(property "Reference" "U4"
+		(property "Reference" "U3"
 			(at 107.95 38.9382 0)
 			(effects
 				(font
@@ -5293,7 +5293,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Quad Low-Voltage Rail-to-Rail Output Operational Amplifier, SOIC-14/SSOP-14"
 			(at 109.22 64.77 0)
 			(effects
 				(font
@@ -5374,7 +5374,7 @@
 		(instances
 			(project "GeoMCU"
 				(path "/224768bc-6009-43ba-aa4a-70cbaa15b5a3/00000000-0000-0000-0000-000060b99a4b"
-					(reference "U4")
+					(reference "U3")
 					(unit 3)
 				)
 			)
@@ -5389,7 +5389,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00006120d54c")
-		(property "Reference" "U4"
+		(property "Reference" "U3"
 			(at 185.42 55.4482 0)
 			(effects
 				(font
@@ -5423,7 +5423,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Quad Low-Voltage Rail-to-Rail Output Operational Amplifier, SOIC-14/SSOP-14"
 			(at 185.42 64.77 0)
 			(effects
 				(font
@@ -5504,7 +5504,7 @@
 		(instances
 			(project "GeoMCU"
 				(path "/224768bc-6009-43ba-aa4a-70cbaa15b5a3/00000000-0000-0000-0000-000060b99a4b"
-					(reference "U4")
+					(reference "U3")
 					(unit 4)
 				)
 			)
@@ -5519,7 +5519,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000061210ca4")
-		(property "Reference" "U4"
+		(property "Reference" "U3"
 			(at 211.0232 127.1016 0)
 			(effects
 				(font
@@ -5555,7 +5555,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Quad Low-Voltage Rail-to-Rail Output Operational Amplifier, SOIC-14/SSOP-14"
 			(at 212.09 128.27 0)
 			(effects
 				(font
@@ -5636,7 +5636,7 @@
 		(instances
 			(project "GeoMCU"
 				(path "/224768bc-6009-43ba-aa4a-70cbaa15b5a3/00000000-0000-0000-0000-000060b99a4b"
-					(reference "U4")
+					(reference "U3")
 					(unit 5)
 				)
 			)
@@ -5651,7 +5651,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-0000612a3d88")
-		(property "Reference" "R3"
+		(property "Reference" "R8"
 			(at 97.917 54.61 90)
 			(effects
 				(font
@@ -5676,7 +5676,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 92.71 54.61 0)
 			(effects
 				(font
@@ -5685,7 +5685,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, US symbol"
 			(at 92.71 54.61 0)
 			(effects
 				(font
@@ -5730,7 +5730,7 @@
 		(instances
 			(project "GeoMCU"
 				(path "/224768bc-6009-43ba-aa4a-70cbaa15b5a3/00000000-0000-0000-0000-000060b99a4b"
-					(reference "R3")
+					(reference "R8")
 					(unit 1)
 				)
 			)
@@ -5745,7 +5745,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00006135e6f7")
-		(property "Reference" "R14"
+		(property "Reference" "R10"
 			(at 143.51 59.563 90)
 			(effects
 				(font
@@ -5770,7 +5770,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 143.51 64.77 0)
 			(effects
 				(font
@@ -5779,7 +5779,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, US symbol"
 			(at 143.51 64.77 0)
 			(effects
 				(font
@@ -5824,7 +5824,7 @@
 		(instances
 			(project "GeoMCU"
 				(path "/224768bc-6009-43ba-aa4a-70cbaa15b5a3/00000000-0000-0000-0000-000060b99a4b"
-					(reference "R14")
+					(reference "R10")
 					(unit 1)
 				)
 			)
@@ -5839,7 +5839,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-0000614218de")
-		(property "Reference" "#PWR027"
+		(property "Reference" "#PWR035"
 			(at 77.47 41.91 0)
 			(effects
 				(font
@@ -5874,7 +5874,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GNDREF\" , reference supply ground"
 			(at 77.47 35.56 0)
 			(effects
 				(font
@@ -5889,7 +5889,7 @@
 		(instances
 			(project "GeoMCU"
 				(path "/224768bc-6009-43ba-aa4a-70cbaa15b5a3/00000000-0000-0000-0000-000060b99a4b"
-					(reference "#PWR027")
+					(reference "#PWR035")
 					(unit 1)
 				)
 			)
@@ -5904,7 +5904,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00006154980a")
-		(property "Reference" "U5"
+		(property "Reference" "U7"
 			(at 52.07 69.85 0)
 			(effects
 				(font
@@ -5938,7 +5938,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Single Digital Potentiometer, SPI interface, 256 taps, 10 kohm"
 			(at 58.42 83.82 0)
 			(effects
 				(font
@@ -5947,7 +5947,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C136395"
+		(property "LCSC" "C17064"
 			(at 58.42 83.82 0)
 			(effects
 				(font
@@ -6001,7 +6001,7 @@
 		(instances
 			(project "GeoMCU"
 				(path "/224768bc-6009-43ba-aa4a-70cbaa15b5a3/00000000-0000-0000-0000-000060b99a4b"
-					(reference "U5")
+					(reference "U7")
 					(unit 1)
 				)
 			)
@@ -6017,7 +6017,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00006157a97b")
-		(property "Reference" "C18"
+		(property "Reference" "C15"
 			(at 85.09 39.4208 90)
 			(effects
 				(font
@@ -6051,7 +6051,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor"
 			(at 85.09 33.02 0)
 			(effects
 				(font
@@ -6096,7 +6096,7 @@
 		(instances
 			(project "GeoMCU"
 				(path "/224768bc-6009-43ba-aa4a-70cbaa15b5a3/00000000-0000-0000-0000-000060b99a4b"
-					(reference "C18")
+					(reference "C15")
 					(unit 1)
 				)
 			)
@@ -6112,7 +6112,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-0000615b586c")
-		(property "Reference" "R16"
+		(property "Reference" "R9"
 			(at 107.95 81.153 90)
 			(effects
 				(font
@@ -6137,7 +6137,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 107.95 86.36 0)
 			(effects
 				(font
@@ -6146,7 +6146,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, US symbol"
 			(at 107.95 86.36 0)
 			(effects
 				(font
@@ -6164,7 +6164,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFG Part#" ""
+		(property "MFG Part#" "<=1%, 0603"
 			(at 107.95 86.36 0)
 			(effects
 				(font
@@ -6173,7 +6173,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C17414"
 			(at 107.95 86.36 0)
 			(effects
 				(font
@@ -6191,7 +6191,7 @@
 		(instances
 			(project "GeoMCU"
 				(path "/224768bc-6009-43ba-aa4a-70cbaa15b5a3/00000000-0000-0000-0000-000060b99a4b"
-					(reference "R16")
+					(reference "R9")
 					(unit 1)
 				)
 			)
@@ -6206,7 +6206,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000061af389c")
-		(property "Reference" "R17"
+		(property "Reference" "R13"
 			(at 199.39 59.563 90)
 			(effects
 				(font
@@ -6231,7 +6231,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 199.39 64.77 0)
 			(effects
 				(font
@@ -6240,7 +6240,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, US symbol"
 			(at 199.39 64.77 0)
 			(effects
 				(font
@@ -6285,7 +6285,7 @@
 		(instances
 			(project "GeoMCU"
 				(path "/224768bc-6009-43ba-aa4a-70cbaa15b5a3/00000000-0000-0000-0000-000060b99a4b"
-					(reference "R17")
+					(reference "R13")
 					(unit 1)
 				)
 			)
@@ -6317,7 +6317,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_Array_Convex_4x0603"
 			(at 67.31 56.642 90)
 			(effects
 				(font
@@ -6336,6 +6336,24 @@
 			)
 		)
 		(property "Description" "4 resistor network, parallel topology, split"
+			(at 67.31 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C20197"
+			(at 67.31 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFG Part#" "<=5%, 4x0603"
 			(at 67.31 54.61 0)
 			(effects
 				(font
@@ -6384,9 +6402,9 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "1986830b-4e88-4bb0-800b-e86369eca05f")
-		(property "Reference" "TP11"
+		(property "Reference" "TP10"
 			(at 41.7068 53.7972 0)
 			(effects
 				(font
@@ -6422,7 +6440,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "test point"
 			(at 43.18 50.8 0)
 			(effects
 				(font
@@ -6431,7 +6449,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "DNF"
+		(property "LCSC" "N/A"
 			(at 43.18 50.8 0)
 			(effects
 				(font
@@ -6449,7 +6467,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFG Part#" "DNF"
+		(property "MFG Part#" "N/A"
 			(at 43.18 50.8 0)
 			(effects
 				(font
@@ -6464,7 +6482,7 @@
 		(instances
 			(project "GeoMCU"
 				(path "/224768bc-6009-43ba-aa4a-70cbaa15b5a3/00000000-0000-0000-0000-000060b99a4b"
-					(reference "TP11")
+					(reference "TP10")
 					(unit 1)
 				)
 			)
@@ -6498,7 +6516,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_Array_Convex_4x0603"
 			(at 59.182 39.37 90)
 			(effects
 				(font
@@ -6517,6 +6535,24 @@
 			)
 		)
 		(property "Description" "4 resistor network, parallel topology, split"
+			(at 57.15 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C20197"
+			(at 57.15 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFG Part#" "<=5%, 4x0603"
 			(at 57.15 39.37 0)
 			(effects
 				(font
@@ -6567,7 +6603,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "71c9d8d2-b98c-4f14-94da-3d51624d68db")
-		(property "Reference" "#PWR028"
+		(property "Reference" "#PWR036"
 			(at 92.71 41.91 0)
 			(effects
 				(font
@@ -6602,7 +6638,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GNDA\" , analog ground"
 			(at 92.71 35.56 0)
 			(effects
 				(font
@@ -6617,7 +6653,7 @@
 		(instances
 			(project "GeoMCU"
 				(path "/224768bc-6009-43ba-aa4a-70cbaa15b5a3/00000000-0000-0000-0000-000060b99a4b"
-					(reference "#PWR028")
+					(reference "#PWR036")
 					(unit 1)
 				)
 			)
@@ -6649,7 +6685,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_Array_Convex_4x0603"
 			(at 49.53 46.482 90)
 			(effects
 				(font
@@ -6668,6 +6704,24 @@
 			)
 		)
 		(property "Description" "4 resistor network, parallel topology, split"
+			(at 49.53 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C20197"
+			(at 49.53 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFG Part#" "<=5%, 4x0603"
 			(at 49.53 44.45 0)
 			(effects
 				(font
@@ -6735,7 +6789,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_Array_Convex_4x0603"
 			(at 49.53 51.562 90)
 			(effects
 				(font
@@ -6754,6 +6808,24 @@
 			)
 		)
 		(property "Description" "4 resistor network, parallel topology, split"
+			(at 49.53 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C20197"
+			(at 49.53 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFG Part#" "<=5%, 4x0603"
 			(at 49.53 49.53 0)
 			(effects
 				(font
