@@ -24,6 +24,7 @@ jobs:
 #jobs:
   exports:
     runs-on: ubuntu-latest
+    container: ghcr.io/inti-cmnb/kicad7_auto_full:latest
     steps:
       - uses: actions/checkout@v4
       - name: KiBot Docs Export
