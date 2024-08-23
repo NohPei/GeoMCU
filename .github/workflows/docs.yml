@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Status Check
+name: Design Rules Check
 
 # Controls when the action will run.
 on:
@@ -32,22 +32,21 @@ jobs:
       - uses: actions/checkout@v4
       
       - run: kikit drc run GeoMCU.kicad_pcb
-      
-      - name: Artifacts Upload
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: DRC Report
-          path: GeoMCU.rpt
+        name: Run DRC with KiKit
   docs:
-    needs: [drc]
     runs-on: ubuntu-latest
     container: docker.io/yaqwsx/kikit:nightly-v8
     steps:
       - uses: actions/checkout@v4
 
-      - run: |
-          kicad-cli sch export pdf GeoMCU.kicad_sch -o docs/GeoMCU-schematic.pdf
+      - run: mkdir -p docs/
+
+      - name: Export Schematic PDF
+        run: kicad-cli sch export pdf GeoMCU.kicad_sch -o docs/GeoMCU-schematic.pdf
+
+      - name: Export Layout PDFs
+        run: |
+          mkdir -p docs/
           kicad-cli pcb export pdf --include-border-title GeoMCU.kicad_pcb -o docs/GeoMCU-F_Cu.pdf --layers="F.Cu,User.Drawings,User.Comments,Edge.Cuts"
           kicad-cli pcb export pdf --include-border-title GeoMCU.kicad_pcb -o docs/GeoMCU-In1_Cu.pdf --layers="In1.Cu,User.Drawings,User.Comments,Edge.Cuts"
           kicad-cli pcb export pdf --include-border-title GeoMCU.kicad_pcb -o docs/GeoMCU-In2_Cu.pdf --layers="In2.Cu,User.Drawings,User.Comments,Edge.Cuts"
