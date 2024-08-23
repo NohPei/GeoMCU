@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Viewable Docs Export
+name: JLCPCB Exports
 
 # Controls when the action will run.
 on:
@@ -27,22 +27,16 @@ jobs:
     container: ghcr.io/inti-cmnb/kicad8_auto:latest
     steps:
       - uses: actions/checkout@v4
-      - name: KiBot Docs Export
-        uses: INTI-CMNB/KiBot@v2_k7
-        with:
-          # Required - kibot config file
-          config: docs.kibot.yaml
-          # optional - prefix to output defined in config
-          dir: docs
-          # optional - verbose output info
-          verbose: 1
       
+      - run: |
+          kikit fab jlcpcb GeoMCU.kicad_pcb --assembly --field LCSC --schematic GeoMCU.kicad_sch docs/
+          rm docs/gerbers.zip
       
       - name: Google Chat Notification
         uses: SimonScholz/google-chat-action@main
         if: always()
         with:
-          title: PDF Exports
+          title: JLCPCB Fab Exports
           webhookUrl: ${{ secrets.PIGHARDWARE_GCHAT_WEBHOOK_URL }}
           jobStatus: ${{ job.status }}
 
@@ -50,5 +44,5 @@ jobs:
         uses: actions/upload-artifact@v3
         if: always()
         with:
-          name: docs
+          name: fab_JLCPCB
           path: docs
