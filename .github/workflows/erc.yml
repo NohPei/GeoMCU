@@ -21,7 +21,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
 #jobs:
-  exports:
+  erc:
     runs-on: ubuntu-latest
     container: ghcr.io/inti-cmnb/kicad8_auto:latest
     steps:
@@ -30,7 +30,7 @@ jobs:
       - run: kicad-cli sch erc --exit-code-violations GeoMCU.kicad_sch
       
       - name: Artifacts Upload
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: always()
         with:
           name: Report
