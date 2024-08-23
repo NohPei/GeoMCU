@@ -1,0 +1,69 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Design Rules Check
+
+# Controls when the action will run.
+on:
+  # Run when any design files are changed
+  push:
+    paths:
+      - '**.kicad_sch'
+      - '**.kicad_pcb'
+      - '**.kicad_pro'
+      - '.github/**.yml'
+  pull_request:
+    paths:
+      - '**.kicad_sch'
+      - '**.kicad_pcb'
+      - '**.kicad_pro'
+      - '.github/**.yml'
+  merge_group:
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+#jobs:
+  drc:
+    runs-on: ubuntu-latest
+    container: docker.io/yaqwsx/kikit:nightly-v7
+    steps:
+      - uses: actions/checkout@v4
+      
+      - run: kikit drc run GeoMCU.kicad_pcb
+        name: Run DRC with KiKit
+  docs:
+    runs-on: ubuntu-latest
+    container: docker.io/yaqwsx/kikit:nightly-v7
+    steps:
+      - uses: actions/checkout@v4
+
+      - run: mkdir -p docs/
+
+      - name: Export Schematic PDF
+        run: kicad-cli sch export pdf GeoMCU.kicad_sch -o docs/GeoMCU-schematic.pdf
+
+      - name: Export Layout PDFs
+        run: |
+          mkdir -p docs/
+          kicad-cli pcb export pdf --include-border-title GeoMCU.kicad_pcb -o docs/GeoMCU-F_Cu.pdf --layers="F.Cu,User.Drawings,User.Comments,Edge.Cuts"
+          kicad-cli pcb export pdf --include-border-title GeoMCU.kicad_pcb -o docs/GeoMCU-In1_Cu.pdf --layers="In1.Cu,User.Drawings,User.Comments,Edge.Cuts"
+          kicad-cli pcb export pdf --include-border-title GeoMCU.kicad_pcb -o docs/GeoMCU-In2_Cu.pdf --layers="In2.Cu,User.Drawings,User.Comments,Edge.Cuts"
+          kicad-cli pcb export pdf --include-border-title GeoMCU.kicad_pcb -o docs/GeoMCU-B_Cu.pdf --layers="B.Cu,User.Drawings,User.Comments,Edge.Cuts" --mirror
+      
+      
+      - name: Google Chat Notification
+        uses: SimonScholz/google-chat-action@main
+        if: always()
+        with:
+          title: PDF Exports
+          webhookUrl: ${{ secrets.PIGHARDWARE_GCHAT_WEBHOOK_URL }}
+          jobStatus: ${{ job.status }}
+
+      - name: Artifacts Upload
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Viewable Docs
+          path: docs
