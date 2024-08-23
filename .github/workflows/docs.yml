@@ -33,7 +33,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - run: cp -r /home/kicad/.config/kicad/ ~/.config/kicad/
+      - run: |
+          mkdir -p ~/.config/
+          cp -r /home/kicad/.config/kicad/ ~/.config/kicad/
       - run: kicad-cli sch erc --exit-code-violations GeoMCU.kicad_sch
       
       - name: Artifacts Upload
@@ -51,7 +53,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - run: cp -r /home/kicad/.config/kicad/ ~/.config/kicad/
+      - run: |
+          mkdir -p ~/.config/
+          cp -r /home/kicad/.config/kicad/ ~/.config/kicad/
       - run: kicad-cli pcb drc --exit-code-violations GeoMCU.kicad_pcb
       
       - name: Artifacts Upload
@@ -69,7 +73,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - run: cp -r /home/kicad/.config/kicad/ ~/.config/kicad/
+      - run: |
+          mkdir -p ~/.config/
+          cp -r /home/kicad/.config/kicad/ ~/.config/kicad/
       - run: |
           kicad-cli sch export pdf GeoMCU.kicad_sch -o docs/GeoMCU-schematic.pdf
           kicad-cli pcb export pdf --include-border-title GeoMCU.kicad_pcb -o docs/GeoMCU-F_Cu.pdf --layers="F.Cu,User.Drawings,User.Comments,Edge.Cuts"
