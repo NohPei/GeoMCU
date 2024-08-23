@@ -12,8 +12,6 @@ on:
     paths:
       - '**.kicad_sch'
   merge_group:
-    paths:
-      - '**.kicad_pcb'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -23,7 +21,7 @@ jobs:
 #jobs:
   erc:
     runs-on: ubuntu-latest
-    container: ghcr.io/inti-cmnb/kicad8_auto:latest
+    container: ghcr.io/inti-cmnb/kicad8_auto_full:latest
     steps:
       - uses: actions/checkout@v4
       
