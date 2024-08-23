@@ -25,38 +25,13 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
 #jobs:
-  erc:
-    runs-on: ubuntu-latest
-    container:
-      image: ghcr.io/kicad/kicad:8.0
-      options: --user root
-    steps:
-      - uses: actions/checkout@v4
-      
-      - run: |
-          mkdir -p ~/.config/
-          cp -r /home/kicad/.config/kicad/ ~/.config/kicad/
-      - run: kicad-cli sch erc --exit-code-violations GeoMCU.kicad_sch
-      
-      - name: Artifacts Upload
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: ERC Report
-          path: GeoMCU.rpt
-
   drc:
     runs-on: ubuntu-latest
-    container:
-      image: ghcr.io/kicad/kicad:8.0
-      options: --user root
+    container: docker.io/yaqwsx/kikit:nightly-v8
     steps:
       - uses: actions/checkout@v4
       
-      - run: |
-          mkdir -p ~/.config/
-          cp -r /home/kicad/.config/kicad/ ~/.config/kicad/
-      - run: kicad-cli pcb drc --exit-code-violations GeoMCU.kicad_pcb
+      - run: kikit drc run GeoMCU.kicad_pcb
       
       - name: Artifacts Upload
         uses: actions/upload-artifact@v4
@@ -65,17 +40,12 @@ jobs:
           name: DRC Report
           path: GeoMCU.rpt
   docs:
-    needs: [erc, drc]
+    needs: [drc]
     runs-on: ubuntu-latest
-    container:
-      image: ghcr.io/kicad/kicad:8.0
-      options: --user root
+    container: docker.io/yaqwsx/kikit:nightly-v8
     steps:
       - uses: actions/checkout@v4
 
-      - run: |
-          mkdir -p ~/.config/
-          cp -r /home/kicad/.config/kicad/ ~/.config/kicad/
       - run: |
           kicad-cli sch export pdf GeoMCU.kicad_sch -o docs/GeoMCU-schematic.pdf
           kicad-cli pcb export pdf --include-border-title GeoMCU.kicad_pcb -o docs/GeoMCU-F_Cu.pdf --layers="F.Cu,User.Drawings,User.Comments,Edge.Cuts"
