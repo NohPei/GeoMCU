@@ -1,4 +1,4 @@
-![Docs Export](https://github.com/NohPei/GeoMCU/actions/workflows/exports.yml/badge.svg)
+![Design Rules Check](https://github.com/NohPei/GeoMCU/actions/workflows/docs.yml/badge.svg)
 
 # GeoMCU Board
 Interface board for Structure-as-Sensor Geophones with embedded Microcontroller.
