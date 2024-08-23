@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Viewable Docs Export
+name: Status Check
 
 # Controls when the action will run.
 on:
@@ -10,16 +10,14 @@ on:
       - '**.kicad_sch'
       - '**.kicad_pcb'
       - '**.kicad_pro'
+      - '.github/**.yml'
   pull_request:
     paths:
       - '**.kicad_sch'
       - '**.kicad_pcb'
       - '**.kicad_pro'
+      - '.github/**.yml'
   merge_group:
-    paths:
-      - '**.kicad_sch'
-      - '**.kicad_pcb'
-      - '**.kicad_pro'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -27,20 +25,48 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
 #jobs:
-  docs:
+  erc:
     runs-on: ubuntu-latest
-    container: ghcr.io/inti-cmnb/kicad8_auto:latest
+    container: ghcr.io/kicad/kicad:8.0
     steps:
       - uses: actions/checkout@v4
-      - name: KiBot Docs Export
-        uses: INTI-CMNB/KiBot@v2_k8
+      
+      - run: kicad-cli sch erc --exit-code-violations GeoMCU.kicad_sch
+      
+      - name: Artifacts Upload
+        uses: actions/upload-artifact@v4
+        if: always()
         with:
-          # Required - kibot config file
-          config: .github/docs.kibot.yaml
-          # optional - prefix to output defined in config
-          dir: docs
-          # optional - verbose output info
-          verbose: 1
+          name: ERC Report
+          path: GeoMCU.rpt
+
+  drc:
+    runs-on: ubuntu-latest
+    container: ghcr.io/kicad/kicad:8.0
+    steps:
+      - uses: actions/checkout@v4
+      
+      - run: kicad-cli pcb drc --exit-code-violations GeoMCU.kicad_pcb
+      
+      - name: Artifacts Upload
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: DRC Report
+          path: GeoMCU.rpt
+  docs:
+    needs: [erc, drc]
+    runs-on: ubuntu-latest
+    container: ghcr.io/kicad/kicad:8.0
+    steps:
+      - uses: actions/checkout@v4
+
+      - run: |
+          kicad-cli sch export pdf GeoMCU.kicad_sch -o docs/GeoMCU-schematic.pdf
+          kicad-cli pcb export pdf --include-border-title GeoMCU.kicad_pcb -o docs/GeoMCU-F_Cu.pdf --layers="F.Cu,User.Drawings,User.Comments,Edge.Cuts"
+          kicad-cli pcb export pdf --include-border-title GeoMCU.kicad_pcb -o docs/GeoMCU-In1_Cu.pdf --layers="In1.Cu,User.Drawings,User.Comments,Edge.Cuts"
+          kicad-cli pcb export pdf --include-border-title GeoMCU.kicad_pcb -o docs/GeoMCU-In2_Cu.pdf --layers="In2.Cu,User.Drawings,User.Comments,Edge.Cuts"
+          kicad-cli pcb export pdf --include-border-title GeoMCU.kicad_pcb -o docs/GeoMCU-B_Cu.pdf --layers="B.Cu,User.Drawings,User.Comments,Edge.Cuts" --mirror
       
       
       - name: Google Chat Notification
@@ -55,5 +81,5 @@ jobs:
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: docs
+          name: Viewable Docs
           path: docs

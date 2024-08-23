@@ -10,11 +10,11 @@ on:
       - '**.kicad_sch'
       - '**.kicad_pcb'
       - '**.kicad_pro'
-  pull_request:
-    paths:
-      - '**.kicad_sch'
-      - '**.kicad_pcb'
-      - '**.kicad_pro'
+      - '.github/workflows/jlc.yml'
+    branches:
+      - "main"
+    tags:
+      - "v*"
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -24,7 +24,7 @@ jobs:
 #jobs:
   jlc_fab:
     runs-on: ubuntu-latest
-    container: ghcr.io/inti-cmnb/kicad8_auto:latest
+    container: docker.io/yaqwsx/kikit:nightly-v8
     steps:
       - uses: actions/checkout@v4
       
