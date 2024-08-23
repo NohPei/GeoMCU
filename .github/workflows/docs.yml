@@ -15,6 +15,11 @@ on:
       - '**.kicad_sch'
       - '**.kicad_pcb'
       - '**.kicad_pro'
+  merge_group:
+    paths:
+      - '**.kicad_sch'
+      - '**.kicad_pcb'
+      - '**.kicad_pro'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -31,7 +36,7 @@ jobs:
         uses: INTI-CMNB/KiBot@v2_k7
         with:
           # Required - kibot config file
-          config: docs.kibot.yaml
+          config: .github/docs.kibot.yaml
           # optional - prefix to output defined in config
           dir: docs
           # optional - verbose output info
