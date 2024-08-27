@@ -2402,6 +2402,12 @@
 		(uuid "5dbda758-e74b-4ccf-ad68-495d537d68ba")
 	)
 	(junction
+		(at 209.55 119.38)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "63d8793f-2bdc-4457-a3b0-ed476cf8b356")
+	)
+	(junction
 		(at 21.59 115.57)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2418,6 +2424,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "93181088-6342-47bf-9220-dae211b5c038")
+	)
+	(junction
+		(at 209.55 137.16)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9fc42c7a-41a3-4440-8937-dbd20e5f20c1")
 	)
 	(junction
 		(at 58.42 71.12)
@@ -2492,6 +2504,16 @@
 			(type default)
 		)
 		(uuid "0938c137-668b-4d2f-b92b-cadb1df72bdb")
+	)
+	(wire
+		(pts
+			(xy 209.55 137.16) (xy 209.55 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "134cc77e-8916-4eca-9fc2-cd58944d37fe")
 	)
 	(polyline
 		(pts
@@ -2645,6 +2667,16 @@
 	)
 	(wire
 		(pts
+			(xy 223.52 119.38) (xy 209.55 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "33d1840c-5a63-465a-8f94-0a9f73a1b058")
+	)
+	(wire
+		(pts
 			(xy 120.65 64.77) (xy 123.19 64.77)
 		)
 		(stroke
@@ -2715,7 +2747,7 @@
 	)
 	(wire
 		(pts
-			(xy 209.55 115.57) (xy 209.55 120.65)
+			(xy 209.55 115.57) (xy 209.55 119.38)
 		)
 		(stroke
 			(width 0)
@@ -2775,7 +2807,7 @@
 	)
 	(wire
 		(pts
-			(xy 209.55 135.89) (xy 209.55 140.97)
+			(xy 209.55 135.89) (xy 209.55 137.16)
 		)
 		(stroke
 			(width 0)
@@ -2922,6 +2954,16 @@
 			(type default)
 		)
 		(uuid "6474aa6c-825c-4f0f-9938-759b68df02a5")
+	)
+	(wire
+		(pts
+			(xy 209.55 119.38) (xy 209.55 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "65cdbe6d-12c3-427e-960d-e2b63b207164")
 	)
 	(wire
 		(pts
@@ -3155,6 +3197,16 @@
 	)
 	(wire
 		(pts
+			(xy 223.52 137.16) (xy 209.55 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bee6dd7d-f2f7-4a52-a030-1b762e1396a6")
+	)
+	(wire
+		(pts
 			(xy 96.52 133.35) (xy 96.52 130.81)
 		)
 		(stroke
@@ -3192,6 +3244,16 @@
 			(type default)
 		)
 		(uuid "c7f7bd58-1ebd-40fd-a39d-a95530a751b6")
+	)
+	(wire
+		(pts
+			(xy 223.52 124.46) (xy 223.52 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c968df92-5445-4c00-b6ec-83286e0115d3")
 	)
 	(wire
 		(pts
@@ -3422,6 +3484,16 @@
 			(type default)
 		)
 		(uuid "f6dcb5b4-0971-448a-b9ab-6db37a750704")
+	)
+	(wire
+		(pts
+			(xy 223.52 132.08) (xy 223.52 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f819b2b0-de76-4605-857a-fbfe35fb4d1c")
 	)
 	(wire
 		(pts
@@ -6560,6 +6632,102 @@
 			(project "GeoMCU"
 				(path "/224768bc-6009-43ba-aa4a-70cbaa15b5a3/00000000-0000-0000-0000-000060b99a4b"
 					(reference "TP10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 223.52 128.27 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3b790f73-b974-4e6e-ac2a-6d446023ae17")
+		(property "Reference" "C18"
+			(at 224.155 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0.1u"
+			(at 224.155 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 224.4852 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 223.52 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 223.52 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C14663"
+			(at 223.52 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MANUFACTURER" "Any"
+			(at 223.52 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFG Part#" "X7R, >5V, 0603"
+			(at 223.52 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f2861d44-4e14-4e0c-84df-d098005a5d5c")
+		)
+		(pin "2"
+			(uuid "1d6e2ba0-c6d6-4afd-8316-521d9b71e934")
+		)
+		(instances
+			(project "GeoMCU"
+				(path "/224768bc-6009-43ba-aa4a-70cbaa15b5a3/00000000-0000-0000-0000-000060b99a4b"
+					(reference "C18")
 					(unit 1)
 				)
 			)
