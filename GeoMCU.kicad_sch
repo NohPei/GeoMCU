@@ -12314,14 +12314,14 @@
 		(lib_id "Amplifier_Operational:LMV324")
 		(at 99.06 143.51 0)
 		(mirror x)
-		(unit 3)
+		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "6f5faf9d-3237-4799-86df-458432dd8a72")
+		(uuid "9d6f3fcb-0a80-4d43-86b1-a6bdb44f7d75")
 		(property "Reference" "U4"
-			(at 98.806 154.4574 0)
+			(at 99.06 152.8318 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12329,7 +12329,7 @@
 			)
 		)
 		(property "Value" "LMV324"
-			(at 98.806 152.146 0)
+			(at 99.06 150.5204 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12390,53 +12390,53 @@
 				(hide yes)
 			)
 		)
-		(pin "10"
-			(uuid "9e454410-29da-4d33-9a86-2aaf5023f706")
-		)
-		(pin "8"
-			(uuid "4ba08a4c-8f87-465b-a0d3-25027cb7f064")
-		)
-		(pin "9"
-			(uuid "c2d1ec68-04e9-4755-9804-d90ce023bdb8")
-		)
 		(pin "1"
-			(uuid "83ea373d-b2ea-493a-a2f0-cc5486c6b8c6")
+			(uuid "f258cae4-ff04-4679-96c6-ff36b8224478")
 		)
 		(pin "2"
-			(uuid "f1606e24-a49d-48f0-a3da-9475ec3e27d3")
+			(uuid "18590c6f-5c07-4c73-abfe-d6ddb00dc2b6")
 		)
 		(pin "3"
-			(uuid "ce10930c-b796-47ac-a2e5-7c4dc9157d46")
+			(uuid "cfbfca7a-1c48-4260-9246-4ec632a1fc1c")
 		)
 		(pin "5"
-			(uuid "9a37f12e-6811-468d-a554-5fd12bad50de")
+			(uuid "cfc72e95-2e39-42f9-bd94-c1c273f360c4")
 		)
 		(pin "6"
-			(uuid "ddb91130-ca4c-4e63-bc10-f62a60fdef60")
+			(uuid "ad822c10-1596-45a7-8eb2-848b93725a2c")
 		)
 		(pin "7"
-			(uuid "ef4d5754-9824-4479-a8b5-3205a3ced4bd")
+			(uuid "c2c89e07-d14e-4694-a6aa-382408a313db")
+		)
+		(pin "10"
+			(uuid "22681c45-c16b-4016-8015-7034fe88d78d")
+		)
+		(pin "8"
+			(uuid "c14a1f9c-5333-4286-a5ff-f3e07563ac73")
+		)
+		(pin "9"
+			(uuid "ddeb11be-e558-4875-9323-5f222c53d47b")
 		)
 		(pin "12"
-			(uuid "d6b4755d-c6e7-4615-956f-36511f02e105")
+			(uuid "f6050a1a-1de4-466d-a5c5-7ca2cd81f516")
 		)
 		(pin "13"
-			(uuid "988bcd3a-ebde-4eea-bf7d-5e052fb7807f")
+			(uuid "e22ab3f3-989b-419c-8078-b9e9368039c8")
 		)
 		(pin "14"
-			(uuid "e1df7ce3-7437-4f65-af2b-468c988090a5")
+			(uuid "764055fc-4ad4-4047-9b00-559f2d369755")
 		)
 		(pin "11"
-			(uuid "fe58d320-a6f9-4d42-b682-e8d5da1b70d4")
+			(uuid "494fb9da-3fdc-4e87-8781-6f88000f9a9f")
 		)
 		(pin "4"
-			(uuid "9d62aaf6-e466-4c1b-a213-71ceba3519a1")
+			(uuid "bd9ddf70-3816-498c-8a8e-ccc4961fa8d9")
 		)
 		(instances
 			(project "GeoMCU"
 				(path "/224768bc-6009-43ba-aa4a-70cbaa15b5a3"
 					(reference "U4")
-					(unit 3)
+					(unit 1)
 				)
 			)
 		)
