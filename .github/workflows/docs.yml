@@ -27,7 +27,7 @@ jobs:
 #jobs:
   drc:
     runs-on: ubuntu-latest
-    container: docker.io/yaqwsx/kikit:nightly-v7
+    container: docker.io/yaqwsx/kikit:nightly-v8
     steps:
       - uses: actions/checkout@v4
       
