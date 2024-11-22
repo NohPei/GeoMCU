@@ -25,15 +25,16 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
 #jobs:
-  erc:
-    name: "Electrical Rules Check"
-    runs-on: ubuntu-latest
-    container: docker.io/yaqwsx/kikit:nightly-v8
-    steps:
-      - uses: actions/checkout@v4
-      
-      - run: kicad-cli sch erc --severity-error --severity-warning --exit-code-violations GeoMCU.kicad_sch
-        name: Run ERC on Schematic
+  # erc:
+  #   name: "Electrical Rules Check"
+  #   runs-on: ubuntu-latest
+  #   container: docker.io/yaqwsx/kikit:nightly-v8
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     
+  #     - run: kicad-cli sch erc --severity-error --severity-warning --exit-code-violations GeoMCU.kicad_sch
+  #       name: Run ERC on Schematic
+  # Breaks because kicad-cli needs to be pre-prepped...
   drc:
     name: "Design Rules Check"
     runs-on: ubuntu-latest
@@ -41,12 +42,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - run: kicad-cli pcb drc --schematic-parity --severity-error --severity-warning --exit-code-violations GeoMCU.kicad_pcb
+      - run: kikit drc run GeoMCU.kicad_pcb
         name: Run DRC on Board
   docs:
     name: "PDF Exports"
     runs-on: ubuntu-latest
-    container: docker.io/kicad/kicad
+    container: docker.io/yaqwsx/kikit:nightly-v8
     steps:
       - uses: actions/checkout@v4
 
