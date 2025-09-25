@@ -2268,7 +2268,7 @@
 	)
 	(wire
 		(pts
-			(xy 176.53 91.44) (xy 180.34 91.44)
+			(xy 177.8 91.44) (xy 180.34 91.44)
 		)
 		(stroke
 			(width 0)
@@ -2348,7 +2348,7 @@
 	)
 	(wire
 		(pts
-			(xy 157.48 93.98) (xy 161.29 93.98)
+			(xy 157.48 93.98) (xy 162.56 93.98)
 		)
 		(stroke
 			(width 0)
@@ -3108,7 +3108,7 @@
 	)
 	(wire
 		(pts
-			(xy 137.16 62.23) (xy 137.16 88.9)
+			(xy 137.16 88.9) (xy 137.16 62.23)
 		)
 		(stroke
 			(width 0)
@@ -3238,7 +3238,7 @@
 	)
 	(wire
 		(pts
-			(xy 137.16 88.9) (xy 161.29 88.9)
+			(xy 137.16 88.9) (xy 162.56 88.9)
 		)
 		(stroke
 			(width 0)
@@ -4822,7 +4822,7 @@
 	)
 	(symbol
 		(lib_id "Amplifier_Operational:LMV324")
-		(at 168.91 91.44 0)
+		(at 170.18 91.44 0)
 		(unit 3)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4830,7 +4830,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000061207c5b")
 		(property "Reference" "U4"
-			(at 168.91 82.1182 0)
+			(at 170.18 82.1182 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4838,7 +4838,7 @@
 			)
 		)
 		(property "Value" "LMV324"
-			(at 168.91 84.4296 0)
+			(at 170.18 84.4296 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4846,7 +4846,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
-			(at 167.64 88.9 0)
+			(at 168.91 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4855,7 +4855,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lmv324.pdf"
-			(at 170.18 86.36 0)
+			(at 171.45 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4864,7 +4864,7 @@
 			)
 		)
 		(property "Description" "Quad Low-Voltage Rail-to-Rail Output Operational Amplifier, SOIC-14/SSOP-14"
-			(at 168.91 91.44 0)
+			(at 170.18 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4873,7 +4873,7 @@
 			)
 		)
 		(property "LCSC" "C7974"
-			(at 168.91 91.44 0)
+			(at 170.18 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4882,7 +4882,7 @@
 			)
 		)
 		(property "MANUFACTURER" "Texas Instruments"
-			(at 168.91 91.44 0)
+			(at 170.18 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4891,7 +4891,7 @@
 			)
 		)
 		(property "MFG Part#" "LMV324A"
-			(at 168.91 91.44 0)
+			(at 170.18 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
