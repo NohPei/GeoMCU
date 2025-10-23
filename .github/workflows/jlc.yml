@@ -23,8 +23,9 @@ on:
 jobs:
 #jobs:
   jlc_fab:
+    name: "JLCPCB Exports"
     runs-on: ubuntu-latest
-    container: docker.io/yaqwsx/kikit:nightly-v7
+    container: docker.io/yaqwsx/kikit:nightly-v8
     steps:
       - uses: actions/checkout@v4
       
@@ -32,14 +33,6 @@ jobs:
           kikit fab jlcpcb GeoMCU.kicad_pcb --assembly --field LCSC --schematic GeoMCU.kicad_sch docs/
           rm docs/gerbers.zip
       
-      - name: Google Chat Notification
-        uses: SimonScholz/google-chat-action@main
-        if: always()
-        with:
-          title: JLCPCB Fab Exports
-          webhookUrl: ${{ secrets.PIGHARDWARE_GCHAT_WEBHOOK_URL }}
-          jobStatus: ${{ job.status }}
-
       - name: Artifacts Upload
         uses: actions/upload-artifact@v4
         if: always()
