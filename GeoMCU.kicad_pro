@@ -106,7 +106,7 @@
         "items_not_allowed": "error",
         "length_out_of_range": "error",
         "lib_footprint_issues": "warning",
-        "lib_footprint_mismatch": "warning",
+        "lib_footprint_mismatch": "ignore",
         "malformed_courtyard": "error",
         "microvia_drill_out_of_range": "error",
         "mirrored_text_on_front_layer": "warning",
@@ -167,8 +167,8 @@
       "teardrop_options": [
         {
           "td_onpthpad": true,
-          "td_onroundshapesonly": false,
           "td_onsmdpad": true,
+          "td_onroundshapesonly": false,
           "td_ontrackend": false,
           "td_onvia": true
         }
@@ -516,6 +516,7 @@
       "single_global_label": "ignore",
       "unannotated": "error",
       "unconnected_wire_endpoint": "warning",
+      "undefined_netclass": "error",
       "unit_value_mismatch": "error",
       "unresolved_variable": "error",
       "wire_dangling": "error"

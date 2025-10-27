@@ -7,10 +7,10 @@ on:
   # Run when any design files are changed
   push:
     paths:
-      - '**.kicad_sch'
-      - '**.kicad_pcb'
-      - '**.kicad_pro'
-      - '.github/workflows/jlc.yml'
+      - "**.kicad_sch"
+      - "**.kicad_pcb"
+      - "**.kicad_pro"
+      - ".github/workflows/jlc.yml"
     branches:
       - "main"
     tags:
@@ -21,21 +21,22 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-#jobs:
-  jlc_fab:
-    name: "JLCPCB Exports"
+  #jobs:
+  fab_exports:
+    name: "Fabrication Outputs"
     runs-on: ubuntu-latest
-    container: docker.io/yaqwsx/kikit:nightly-v8
+    # container: ghcr.io/kicad/kicad:9.0
     steps:
       - uses: actions/checkout@v4
-      
-      - run: |
-          kikit fab jlcpcb GeoMCU.kicad_pcb --assembly --field LCSC --schematic GeoMCU.kicad_sch docs/
-          rm docs/gerbers.zip
-      
+
+      - uses: actions-for-kicad/kicad-actions@v1.6-k9.0
+        with:
+          entrypoint: kicad-cli
+          args: jobset run -f fab.kicad_jobset GeoMCU.kicad_pro
+
       - name: Artifacts Upload
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: fab_JLCPCB
-          path: docs
+          name: Generic Files
+          path: production
