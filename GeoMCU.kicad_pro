@@ -167,8 +167,8 @@
       "teardrop_options": [
         {
           "td_onpthpad": true,
-          "td_onsmdpad": true,
           "td_onroundshapesonly": false,
+          "td_onsmdpad": true,
           "td_ontrackend": false,
           "td_onvia": true
         }
@@ -564,7 +564,7 @@
     "last_paths": {
       "gencad": "",
       "idf": "",
-      "netlist": "",
+      "netlist": "./",
       "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
